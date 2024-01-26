@@ -28,7 +28,7 @@ app.get('/books/', async (request, response) => {
                         FROM
                         book
                         ORDER BY
-                        book_id
+                        book_id;
                         `
   const booksArray = await db.all(getBooksQuery)
   response.send(booksArray)
